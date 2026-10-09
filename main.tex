@@ -1,0 +1,155 @@
+\documentclass[24pt, aspectratio=169]{beamer}
+\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen=right} % Both
+\setbeameroption{hide notes} % Only slides
+%%%%%%%% tema e cor %%%%%%%%
+\mode<presentation> {
+\usetheme{Boadilla}
+\usecolortheme{seahorse}
+%\usepackage{mathptmx}
+\usepackage{relsize} % for bigger size summations
+\usepackage{subcaption}
+\usepackage{bm}
+% \usepackage{inputenc}
+% \usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{xcolor}
+
+\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{footline}{}
+\setbeamertemplate{footline}{
+	\raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[10pt]{\tiny\insertframenumber}}}}
+
+\newcommand\unnumbered{\setbeamertemplate{footline}{}}
+
+
+
+
+
+\usepackage[sorting=none,maxcitenames=9,maxbibnames=9,backend=bibtex,firstinits=true,style=numeric]{biblatex}
+\AtBeginBibliography{\scriptsize}
+\addbibresource{ref.bib}
+
+\usepackage{booktabs}
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\abovetopsep}{4pt}
+\usepackage{multirow}
+
+%color for the tavble row
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Gray}{gray}{0.9}
+
+%\usecolortheme{albatross}
+\DeclareMathOperator{\Ra}{R_1}
+\DeclareMathOperator{\Rb}{R_2}
+\DeclareMathOperator{\Rc}{R_3}
+\DeclareMathOperator{\thh}{th}
+\DeclareMathOperator{\score}{score}
+\DeclareMathOperator{\iou}{IoU}
+\DeclareMathOperator*{\argmax}{arg\,max}
+}
+\DeclareMathOperator*{\minimize}{minimize}
+% Presentation configuration
+\usepackage[ngerman, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\institute[TUK]{
+\begin{Large}
+    HyPo Conference\\
+\end{Large}
+\vspace{0.5cm}
+}
+\date{\today}
+\captionsetup{margin=25pt,font=small,labelfont=bf}
+
+
+
+%%%%%%%% titulo e subtitulo %%%%%%%%
+\title[Conference Presentation]{Interpretable Multimodal Anomaly Detection for Powder-Fed Laser-Based DED}
+\date{}
+%%%%%%%% nome dos autores %%%%%%%%
+\author[]{
+} 
+\titlegraphic{\includegraphics[width=4cm,height=1cm,keepaspectratio]{img/logo/mlgroup.png}
+}
+
+\begin{document}
+% Title slide
+{\unnumbered
+\begin{frame}
+\titlepage
+\note[item]{Hi everyone, its another friday afternoon, the research talk session of ML group,  I would like to welcome you all here. My name is Saurabh Varshneya and I am a PhD student at this group. Today I would like to discuss about our research on Interpretable Integration of Multiple MOdalities, and hpw we plan to direct our research in the area of DeeptensorFusion}
+\note[item]{I would like to thank you for giving me the opportunity to present this  progress report}
+\end{frame}
+}
+
+%%%%%%%% slides %%%%%%%%
+% Section 0: Introduction
+\section{Module 0: Introduction}
+
+\begin{frame}{Anomaly Detection detects anomalous patterns in data}
+\end{frame}
+
+\begin{frame}{Deep-SVDD learns a compact hypersphere of normal data representations for Anomaly Detection}
+\end{frame}
+
+\begin{frame}{Multimodal Deep SVDD combine modalities to detect anomalies}
+\end{frame}
+
+\section{Module 1: Algorithms}
+\begin{frame}{Interpretability determine relevance of modalities in linear combinations and non-linear interactions}
+\end{frame}
+
+\begin{frame}{Weight parameters of fusion layer determine relevance scores}
+\end{frame}
+
+\begin{frame}{Tensor product captures non-linear interactions}
+\end{frame}
+
+\begin{frame}{Normalization scheme disentangles the interactions with linear combinations}
+\end{frame}
+
+\begin{frame}{I-MAD fuse modalities in an interpretable manner for Anomaly Detection}
+\end{frame}
+
+\section{Module 2: Experiments and Results}% Section 2: Results
+\begin{frame}{DED-LB simulation provide multimodal data for Anomaly Detection}
+\end{frame}
+
+\begin{frame}{Depth-Ratio is used for deciding labels for testing}
+\end{frame}
+
+\begin{frame}{Fusing multiple modalities }
+\end{frame}
+
+%%%%%%%% agradecimentos %%%%%%%%
+%\begin{frame}{Acknowledgments}
+%    \large{Under Construction}
+%\end{frame}
+%------------------------------------------------
+
+
+%------------------------------------------------
+%------------------------------------------------
+%%%%%%%% referencias %%%%%%%%
+\nocite{*}
+\begin{frame}[allowframebreaks]{ References}
+\scriptsize
+\printbibliography
+\end{frame}
+
+
+%%%%%%%% repete primeiro slide %%%%%%%%
+% \begin{frame}
+% \titlepage 
+% \end{frame}
+
+
+\end{document}
