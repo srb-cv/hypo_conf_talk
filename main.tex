@@ -94,13 +94,49 @@
 % Section 0: Introduction
 \section{Module 0: Introduction}
 
-\begin{frame}{Anomaly Detection detects anomalous patterns in data}
+% Slide ID: s01-ad
+\begin{frame}{Anomaly detection identifies patterns that deviate from normal patterns in the data}
+    \begin{minipage}[c][0.72\textheight][c]{\textwidth}
+        \centering
+        \only<1>{\mbox{}}
+        \only<2>{\includegraphics[width=0.95\textwidth,height=0.72\textheight,keepaspectratio]{img/s01-ad/hazelnuts.pdf}}
+        \only<3>{\includegraphics[width=0.95\textwidth,height=0.72\textheight,keepaspectratio]{img/s01-ad/time-series.pdf}}
+    \end{minipage}
 \end{frame}
 
+%% Slide ID: s02-dsvdd
 \begin{frame}{Deep-SVDD learns a compact hypersphere of normal data representations for Anomaly Detection}
+    \centering
+    \includegraphics[width=0.98\textwidth,height=0.57\textheight,keepaspectratio,trim=0 60bp 0 0,clip]{img/s02-dsvdd/deep-svdd.pdf}
+    \par\vspace{0.5ex}
+    \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.63\textwidth}
+    \centering\small
+    \uncover<2->{%
+        \textbf{Training loss}\par
+        \(\displaystyle
+            \min_{\mathcal{W}}\;
+            \frac{1}{n}\sum_{i=1}^{n}
+            \left\lVert\phi(x_i;\mathcal{W})-c\right\rVert^{2}
+            +\frac{\lambda}{2}\sum_{\ell=1}^{L}
+            \left\lVert W^{\ell}\right\rVert_{F}^{2}
+        \)
+    }
+    \end{column}
+    \begin{column}{0.35\textwidth}
+    \centering\small
+    \uncover<3->{%
+        \textbf{Testing score}\par
+        \(\displaystyle
+            s(x)=\left\lVert\phi(x;\mathcal{W}^{*})-c\right\rVert^{2}
+        \)
+    }
+    \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}{Multimodal Deep SVDD combine modalities to detect anomalies}
+%% Slide ID: s03-multimodal
+\begin{frame}{Multimodal Deep SVDD detect anomalies from fused representations}
 \end{frame}
 
 \section{Module 1: Algorithms}

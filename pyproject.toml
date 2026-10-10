@@ -1,0 +1,10 @@
+[project]
+name = "hypo-conf-talk"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "plotly>=7.1.0",
+]
